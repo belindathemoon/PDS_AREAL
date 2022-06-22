@@ -4,6 +4,8 @@
 #*data_path* is a string that is the path all the way to individual fits files, using wildcards for the subdirectories of the collection. Ex. '/prvt/juno1/PDART_files/jup_supp.irtf_mirsi/data_raw/*/*/*.fits'
 #*file_extension* is a string and the type of file (including '.') that should be included. Ex. '.fits' or '.tif'
 ##### End Variables Info #####
+import glob
+import os
 
 def create_inventory(bundle_name, collection_path, data_path, file_extension):
 	collection_name = collection_path.rsplit('/',1)[1]
@@ -23,7 +25,7 @@ def create_inventory(bundle_name, collection_path, data_path, file_extension):
 	print('Writing temp file to permanent file')
 	inventory.write(inventory_rows)
 	inventory.close
-    print('Done. Nice work!')
+	print('Done. Nice work!')
 
 def create_inventory_instructions():
     print("*bundle_name* is a string that is the directory name within which the collection exists. Ex. 'jup_supp.irtf_mirsi'\n*collection_path* is a string that is the path to the collection which needs the inventory. Do not include a trailing slash. Ex. '/prvt/juno1/PDART_files/jup_supp.irtf_mirsi/data_raw'\n*data_path* is a string that is the path all the way to individual fits files, using wildcards for the subdirectories of the collection. Ex. '/prvt/juno1/PDART_files/jup_supp.irtf_mirsi/data_raw/*/*/*.fits'\n*file_extension* is a string and the type of file (including '.') that should be included. Ex. '.fits' or '.tif'")

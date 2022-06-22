@@ -4,7 +4,9 @@
 # *day_path* is the path to the day-level directories of the data in the form of '/prvt/juno1/PDART_files/bundle_name/data_raw/*/*'. The fits files should be in these day directories (the code below is set up for data in a directory with the format of '/path-to-bundle/data_raw/yyyy/mm-dd/filename.fits'). This path variable should go only as deep as the mm-dd subdirectory, with the year and date as wilcards, for example: 'prvt/juno1/PDART_files/jup_supp.geminis_trecs/data_raw/*/*' (NO TRAILING SLASH)
 # *documents* is the name of your documents folder (it should be in the path in logs_path)
 ########--------End Variables--------#####
-
+import glob
+import os
+from astropy.io import fits
 
 def create_header_observing_logs(logs_path, day_path, documents = 'document', WAVELENG = 'WAVELENG', DATEOBS = 'DATE-OBS', TIMEOBS = 'TIME-OBS', CHPFREQ = 'CHPFREQ', OBSMODE = 'OBSMODE',AIRMASS = 'AIRMASS'):
 # Use this to create the observing logs of a data_raw collection
