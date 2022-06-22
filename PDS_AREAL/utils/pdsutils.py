@@ -1,3 +1,6 @@
+import glob 
+import os
+
 def replace_text(rootdir, search_text, replace_text, print_status=True, file_type='.xml'):
 	for dirpath, dirs, files in os.walk(rootdir):
 		for file in files:
