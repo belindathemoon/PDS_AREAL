@@ -2,7 +2,6 @@ import datetime
 import glob
 import os
 
-
 def create_header_observing_labels(pathvar, templatevar, collection_name, bundle_name, bundle_title, product_author_list, instrument_lid, editor_list = 'Neakrase, Lynn; Huber, Lyle', publication_year = str(datetime.date.today().year), keyword = 'Jupiter', description = 'Observing log produced from FITS image headers'): 
     for path in glob.glob(pathvar):
         if os.path.exists(path.replace('.txt', '.xml')):
