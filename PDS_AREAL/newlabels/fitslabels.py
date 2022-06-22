@@ -12,64 +12,94 @@ def create_fits_labels(pathvar, templatevar, collection_name, bundle_name, title
     Create new (or overwrite existing) xml labels for fits files in data_raw, data_calibrated, or calibration collections.
     
     Args:
-        pathvar (str): The absolute path to the fits files you wish to label. Ex. '/prvt/juno1/PDART_files/jup_supp.geminis_trecs/data_raw/*/*/*.fits'.
-            Note that the asterisks allow the search of multiple subdirectories. If you wanted to run just in one year, the example instead may be
+        pathvar (str): The absolute path to the fits files you wish to label. 
+            Ex. '/prvt/juno1/PDART_files/jup_supp.geminis_trecs/data_raw/*/*/*.fits'.
+            Note that the asterisks allow the search of multiple subdirectories. 
+            If you wanted to run just in one year, the example instead may be
             '/prvt/juno1/PDART_files/jup_supp.geminis_trecs/data_raw/2003/*/*.fits'.
-        templatevar (str): The absolute path to the txt label template. Ex. '/home/bblakley/scripts/universal_fits_label.txt'
-        collection_name (str): The name of the collection directory. Either 'data_raw', 'data_calibrated', or 'calibration'.
-        bundle_name (str): The name of the bundle directory. Ex. 'jup_supp.geminis_trecs' or 'jup_supp.irtf_mirsi'.
-        title (str): A descriptive title for the labels. Ex. 'NASA IRTF 3-Meter Telescope - MIRSI Observation' or 'T-ReCS Observation'.
+        templatevar (str): The absolute path to the txt label template. 
+            Ex. '/home/bblakley/scripts/universal_fits_label.txt'
+        collection_name (str): The name of the collection directory. 
+            Either 'data_raw', 'data_calibrated', or 'calibration'.
+        bundle_name (str): The name of the bundle directory. 
+            Ex. 'jup_supp.geminis_trecs' or 'jup_supp.irtf_mirsi'.
+        title (str): A descriptive title for the labels. 
+            Ex. 'NASA IRTF 3-Meter Telescope - MIRSI Observation' or 'T-ReCS Observation'.
         product_class (str): The PDS data product class. Generally, 'Product_Observational'.
-	product_author_list (str): The authors of the observations (not to be confused with the authors of the labels). Ask Glenn if you can't tell from
-            the image headers. Must be a list of authors' 'last name, first name' separated by semicolons.
+	    product_author_list (str): The authors of the observations (not to be confused with the authors of 
+            the labels). Ask Glenn if you can't tell from the image headers. Must be a list of authors' 
+            'last name, first name' separated by semicolons.
             Ex. 'Orton, Glenn; Venkatesan, Malavika; Kim, Min Hyuk; Yanamandra-Fisher, Padma; Chung, Jennie'
-        observing_system (str): Official name of the whole observing system, including observatory, telescope, and instrument. Examples include:
-            'Gemini South 8.1-m Telescope, Gemini Observatory, National Science Foundation NOIRLab' or '3.0-m NASA Infrared Telescope Facility (IRTF) at Mauna Kea Observatory'
+        observing_system (str): Official name of the whole observing system, including observatory, telescope, 
+            and instrument. Examples include:
+            'Gemini South 8.1-m Telescope, Gemini Observatory, National Science Foundation NOIRLab' 
+            or '3.0-m NASA Infrared Telescope Facility (IRTF) at Mauna Kea Observatory'
         telescope name (str): The official PDS name of the telescope. Ex. 'NASA IRTF 3.0-m Telescope MIRSI'
-        telescope_lid (str): The PDS LID of the telescope (not to be confused with the LID of the observatory or instrument). Ex. 'irtf-maunakea.3m2'.
-            Double check with Lynn if you're not sure.
-        instrument_name (str): The official PDS name of the instrument. Ex. 'Mid-Infrared Spectrometer and Imager (MIRSI)' or 'Thermal-Region Camera Spectrograph (T-ReCS)'
+        telescope_lid (str): The PDS LID of the telescope (not to be confused with the LID of the observatory 
+            or instrument). Ex. 'irtf-maunakea.3m2'. Double check with Lynn if you're not sure.
+        instrument_name (str): The official PDS name of the instrument. 
+            Ex. 'Mid-Infrared Spectrometer and Imager (MIRSI)' or 'Thermal-Region Camera Spectrograph (T-ReCS)'
         instrument_lid (str): The PDS LID of the instrument. Ex. 'irtf-maunakea.3m2.mirsi'. Check with Lynn.
-        document_lid (str): The LID of the userguide for these labels. Generally, it's just the shorthand name of the bundle and then _userguide. Ex. 'mirsi_userguide'
-        fits_desc (str): The description of the fits images. It can be short, but note that it will change from each collection. Ex. 'Ground Based FITS, calibrated data.'
-        fits_prolvl (str): The processing level of the fits images. For calibrated collections, that will be 'Calibrated' and for raw collections, that will be 'Raw'.
+        document_lid (str): The LID of the userguide for these labels. Generally, it's just the shorthand 
+            name of the bundle and then _userguide. Ex. 'mirsi_userguide'
+        fits_desc (str): The description of the fits images. It can be short, but note that it will change 
+            from each collection. Ex. 'Ground Based FITS, calibrated data.'
+        fits_prolvl (str): The processing level of the fits images. For calibrated collections, 
+            that will be 'Calibrated' and for raw collections, that will be 'Raw'.
         fits_primdesc (str): Short description of the type of image. Ex. 'Calibrated data' or 'Raw data'.
-        mu_desc (:obj:`str`, optional): Description of the mu.fits calibrated images. With no user input, defaults to 'Ground Based FITS, emission angle adjustment for cylindrical map.'
-        cmap_desc (:obj:`str`, optional):Description of the cmap.fits calibrated images. With no user input, defaults to 'Ground Based FITS, cylindrical map projection.'
-        vdop_desc (:obj:`str`, optional): Description of the vdop.fits calibrated images. With no user input, defaults to 'Ground Based FITS, doppler shift adjustment for cylindrical map.'
-        mu_prolvl (:obj:`str`, optional): Processing level of the mu.fits calibrated images. With no user input, defaults to 'Derived'.
-        cmap_prolvl (:obj:`str`, optional): Processing level of the cmap.fits calibrated images. With no user input, defaults to 'Derived'.
-        vdop_prolvl (:obj:`str`, optional): Processing level of the vdop.fits calibrated images. With no user input, defaults to 'Derived'.
-        mu_primdesc (:obj:`str`, optional): Primary description of the mu.fits images. With no user input, defaults to 'Cosine of the emission angle for each point on 
-            cylindrical map from the angle between the local zenith and direction of the Earth-based observer'
-        cmap_primdesc (:obj:`str`, optional):  Primary description of the cmap.fits images. With no user input, defaults to 'Projection onto linear cylindrical 
-            coordinate system longitude in System III along abscissa and planetocentric latitude in the ordinate'
-        vdop_primdesc (:obj:`str`, optional): Primary description of the vdop.fits images. With no user input, defaults to 'Radial velocity of cylindrical map 
-            according to an Earth-based observer for CH4 emission interference at 7.9 microns with telluric CH4 absorption'
-        extrablocks (:obj:`int`, optional): Number of extra blocks to add to the offset size for the image. Default = 0. For most collections this can stay at default of 0,
-            however for T-ReCS it must be 2 (extrablocks = 2).
+        mu_desc (:obj:`str`, optional): Description of the mu.fits calibrated images. With no user input, 
+            defaults to 'Ground Based FITS, emission angle adjustment for cylindrical map.'
+        cmap_desc (:obj:`str`, optional):Description of the cmap.fits calibrated images. With no user input, 
+            defaults to 'Ground Based FITS, cylindrical map projection.'
+        vdop_desc (:obj:`str`, optional): Description of the vdop.fits calibrated images. With no user input, 
+            defaults to 'Ground Based FITS, doppler shift adjustment for cylindrical map.'
+        mu_prolvl (:obj:`str`, optional): Processing level of the mu.fits calibrated images. With no user input,
+            defaults to 'Derived'.
+        cmap_prolvl (:obj:`str`, optional): Processing level of the cmap.fits calibrated images. With no user 
+            input, defaults to 'Derived'.
+        vdop_prolvl (:obj:`str`, optional): Processing level of the vdop.fits calibrated images. 
+            With no user input, defaults to 'Derived'.
+        mu_primdesc (:obj:`str`, optional): Primary description of the mu.fits images. With no user input, 
+            defaults to 'Cosine of the emission angle for each point on cylindrical map from the angle between 
+            the local zenith and direction of the Earth-based observer'
+        cmap_primdesc (:obj:`str`, optional):  Primary description of the cmap.fits images. With no user input, 
+            defaults to 'Projection onto linear cylindrical coordinate system longitude in System III along 
+            abscissa and planetocentric latitude in the ordinate'
+        vdop_primdesc (:obj:`str`, optional): Primary description of the vdop.fits images. With no user input, 
+            defaults to 'Radial velocity of cylindrical map according to an Earth-based observer for CH4 
+            emission interference at 7.9 microns with telluric CH4 absorption'
+        extrablocks (:obj:`int`, optional): Number of extra blocks to add to the offset size for the image. 
+            Default = 0. For most collections this can stay at default of 0, however for T-ReCS it must be 2 
+            (extrablocks = 2).
         editor_list (:obj:`str`, optional): PDS editors. Defaults to 'Neakrase, Lynn; Huber, Lyle'.
-        publication_year (:obj:`str`, optional): Year that the bundle will be published to the PDS. With no user input, defaults to this year (uses datetime).
+        publication_year (:obj:`str`, optional): Year that the bundle will be published to the PDS. 
+            With no user input, defaults to this year (uses datetime).
         wavelength_range (:obj:`str`, optional): Wavelength range of the observations. Defaults to 'Infrared'.
-        investigation_name (:obj:`str`, optional): PDS name of the observing campaign or other investigation that produced these images. With no user input, defaults to
-            'Jupiter Support Monitoring Observations'.
+        investigation_name (:obj:`str`, optional): PDS name of the observing campaign or other investigation 
+            that produced these images. With no user input, defaults to 'Jupiter Support Monitoring Observations'.
         investigation_type (:obj:`str`, optional): Defaults to 'Observing Campaign'.
-        investigation_lid (:obj:`str`, optional): PDS LID of the investigation that produced these images. Defaults to 'observing_campaign.jupiter_support'.
-        observatory_name (:obj:`str`, optional): Name of the observatory. You'll need to change this for T-ReCS and COMICS, but it's set to the default that MIRSI, MIRLIN, and MIRAC use.
+        investigation_lid (:obj:`str`, optional): PDS LID of the investigation that produced these images. 
+            Defaults to 'observing_campaign.jupiter_support'.
+        observatory_name (:obj:`str`, optional): Name of the observatory. You'll need to change this for 
+            T-ReCS and COMICS, but it's set to the default that MIRSI, MIRLIN, and MIRAC use.
             Defaults to 'NASA InfraRed Telescope Facility'.
-        observatory_lid (:obj:`str`, optional): The PDS LID of the observatory named in the above argument. Change this if you're changing that one. Defaults to 'observatory.irtf-maunakea'.
+        observatory_lid (:obj:`str`, optional): The PDS LID of the observatory named in the above argument. 
+            Change this if you're changing that one. Defaults to 'observatory.irtf-maunakea'.
         target_name (:obj:`str`, optional): The target of these observations. Defaults to 'Jupiter'.
         target_type (:obj:`str`, optional): The type of target of these observations. Defaults to 'Planet'.
         target_lid (:obj:`str`, optional): The LID of the target. Defaults to 'planet.jupiter'.
-        parsing_standard (:obj:`str`, optional): Parsing standard of the fits files. Unlikely that this will change, but could update for new observations. Defaults to 'FITS 3.0'.
-        header_description (:obj:`str`, optional): This is the description of the header of the images. Pretty standard across all fits images. Defaults to
-            'The header contains information about how the image was collected and any processing that may have happened.'
-        image_description (:obj:`str`, optional): A brief description of the image itself. Since there are so many you'll likely want to keep this standardized.
-            Defaults to 'The image shows Jupiter's atmosphere.'
+        parsing_standard (:obj:`str`, optional): Parsing standard of the fits files. Unlikely that this 
+            will change, but could update for new observations. Defaults to 'FITS 3.0'.
+        header_description (:obj:`str`, optional): This is the description of the header of the images. 
+            Pretty standard across all fits images. Defaults to  'The header contains information about 
+            how the image was collected and any processing that may have happened.'
+        image_description (:obj:`str`, optional): A brief description of the image itself. Since there are so 
+            many you'll likely want to keep this standardized. Defaults to 'The image shows Jupiter's atmosphere.'
         array_type (:obj:`str`, optional): Defaults to 'IEEE754MSBSingle'.
         array_unit (:obj:`str`, optional): Defaults to 'DN'.
-        rewrite (:obj:`bool`, optional): Default is False. This means that if you're running labels in a collection and the code finds labels that already exist, it will skip those
-            and only create labels that don't already exist. If you wish to overwrite incorrect labels, set this to rewrite = True.
+        rewrite (:obj:`bool`, optional): Default is False. This means that if you're running labels in a 
+            collection and the code finds labels that already exist, it will skip those and only create labels 
+            that don't already exist. If you wish to overwrite incorrect labels, set this to rewrite = True.
     """
     errors = ''
     error_count = 0
