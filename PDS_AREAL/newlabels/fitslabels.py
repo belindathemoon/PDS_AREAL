@@ -3,9 +3,9 @@ import datetime
 import glob
 import os
 import math
-import time
 from stat import *
 import re
+
 def create_fits_labels(pathvar, templatevar, collection_name, bundle_name, title, product_class, product_author_list, observing_system, telescope_name, telescope_lid, instrument_name, instrument_lid, document_lid, fits_desc, fits_prolvl, fits_primdesc, mu_desc = 'Ground Based FITS, emission angle adjustment for cylindrical map.', cmap_desc = 'Ground Based FITS, cylindrical map projection.', vdop_desc = 'Ground Based FITS, doppler shift adjustment for cylindrical map.', mu_prolvl = 'Derived', cmap_prolvl = 'Derived', vdop_prolvl = 'Derived', mu_primdesc = 'Cosine of the emission angle for each point on cylindrical map from the angle between the local zenith and direction of the Earth-based observer', cmap_primdesc = 'Projection onto linear cylindrical coordinate system longitude in System III along abscissa and planetocentric latitude in the ordinate', vdop_primdesc = 'Radial velocity of cylindrical map according to an Earth-based observer for CH4 emission interference at 7.9 microns with telluric CH4 absorption', extrablocks = 0, editor_list = 'Neakrase, Lynn; Huber, Lyle', publication_year = str(datetime.date.today().year), wavelength_range = 'Infrared', investigation_name = 'Jupiter Support Monitoring Observations', investigation_type = 'Observing Campaign', investigation_lid = 'observing_campaign.jupiter_support', observatory_name = 'NASA InfraRed Telescope Facility', observatory_lid = 'observatory.irtf-maunakea.3m2', target_name = 'Jupiter', target_type = 'Planet', target_lid = 'planet.jupiter', parsing_standard = 'FITS 3.0', header_description = 'The header contains information about how the image was collected and any processing that may have happened.', image_description = "The image shows Jupiter's atmosphere.", array_type = 'IEEE754MSBSingle', array_unit = 'DN', rewrite = False): 
     """Create fits labels
     

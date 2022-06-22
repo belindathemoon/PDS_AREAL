@@ -1,3 +1,4 @@
+import glob
 import xml.etree.ElementTree as ET
 ET.register_namespace('',"http://pds.nasa.gov/pds4/pds/v1")
 ET.register_namespace('xsi',"http://www.w3.org/2001/XMLSchema-instance")
