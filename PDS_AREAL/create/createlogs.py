@@ -153,3 +153,6 @@ def create_header_observing_logs(logs_path, day_path, documents = 'document', WA
         #Always make sure to close up shop!
         log.close()
         print('Done.')
+
+def create_logs_instructions():
+    print("####--------About the variables------######\n# The header entries might have different key names in each collection, and so the keys are variables which you may change, however they have defaults set (ex. waveleng = 'WAVELENG').\n# *logs_path* is the path to where the logs should be saved. !!!Make sure there is a trailing slash!!! For example: /prvt/juno1/PDART_files/jup_supp.geminis_trecs/document/header_observing_logs/\n# *day_path* is the path to the day-level directories of the data in the form of '/prvt/juno1/PDART_files/bundle_name/data_raw/*/*'. The fits files should be in these day directories (the code below is set up for data in a directory with the format of '/path-to-bundle/data_raw/yyyy/mm-dd/filename.fits'). This path variable should go only as deep as the mm-dd subdirectory, with the year and date as wilcards, for example: 'prvt/juno1/PDART_files/jup_supp.geminis_trecs/data_raw/*/*' (NO TRAILING SLASH)\n# *documents* is the name of your documents folder (it should be in the path in logs_path)\n########--------End Variables--------#####")
