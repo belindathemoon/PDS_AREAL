@@ -1,4 +1,4 @@
-# PDS-AREAL (Planetary Data System AtmospheREs Archive Labeling)
+# PDS_AREAL (Planetary Data System AtmospheREs Archive Labeling)
 Automated labeling of ground-based observations of Jupiter for the PDS Atmosphers node
 
 ### About
