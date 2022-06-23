@@ -71,8 +71,8 @@ def dir_shorten_seconds(directory):
     
     Args:
         directory (str): The absolute path to the files in the directory you want to fix, with wildcards. 
-            For example "/prvt/juno1/PDART_files/jup_supp.geminis_trecs/data_raw/*/*/*.xml
-            
+            For example "/prvt/juno1/PDART_files/jup_supp.geminis_trecs/data_raw/\*/\*/\*.xml
+
     """
     for filestring in glob.glob(directory):
         shorten_seconds(filestring)

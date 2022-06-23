@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>PDS_AREAL.utils package &mdash; PDS AREAL 1.01 documentation</title>
+  <title>PDS_AREAL.utils package &mdash; PDS AREAL 1.00 documentation</title>
   
 
   
@@ -181,17 +181,51 @@
 <dl class="py function">
 <dt id="PDS_AREAL.utils.pdsutils.dir_shorten_seconds">
 <code class="sig-prename descclassname"><span class="pre">PDS_AREAL.utils.pdsutils.</span></code><code class="sig-name descname"><span class="pre">dir_shorten_seconds</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">directory</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PDS_AREAL.utils.pdsutils.dir_shorten_seconds" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Shorten Seconds - Directory</p>
+<dl class="simple">
+<dt>The newest labeling code includes this, however for older labels, this will fix the extra decimals seconds</dt><dd><p>in start_time and end_time. Run this to check and fix all of the files in a directory</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>directory</strong> (<em>str</em>) – The absolute path to the files in the directory you want to fix, with wildcards.
+For example “/prvt/juno1/PDART_files/jup_supp.geminis_trecs/data_raw/*/*/*.xml</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py function">
 <dt id="PDS_AREAL.utils.pdsutils.replace_text">
 <code class="sig-prename descclassname"><span class="pre">PDS_AREAL.utils.pdsutils.</span></code><code class="sig-name descname"><span class="pre">replace_text</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rootdir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">search_text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">replace_text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">print_status</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'.xml'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PDS_AREAL.utils.pdsutils.replace_text" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Replace Text</p>
+<p>Replace text in labels (or any .txt or .xml file).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>rootdir</strong> (<em>str</em>) – The root directory of the files to look for the bad text. For example, if you wanted to
+look for all the xml files in a data_raw collection, they would be in many subdirectories, so the
+root directory would be data raw. Use an absolute path.</p></li>
+<li><p><strong>search_text</strong> (<em>str</em>) – The text you wish to find and replace (the incorrect text).</p></li>
+<li><p><strong>replace_text</strong> (<em>str</em>) – The text you wish to use as a replacement (the correct text)</p></li>
+<li><p><strong>print_status</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code>, optional) – By default, the function will print status to the terminal. For
+quiet mode, change to False.</p></li>
+<li><p><strong>file_type</strong> (<em>str</em>) – The type of file you wish to edit. By default, the function looks for XML files.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py function">
 <dt id="PDS_AREAL.utils.pdsutils.shorten_seconds">
 <code class="sig-prename descclassname"><span class="pre">PDS_AREAL.utils.pdsutils.</span></code><code class="sig-name descname"><span class="pre">shorten_seconds</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filestring</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PDS_AREAL.utils.pdsutils.shorten_seconds" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Shorten Seconds</p>
+<p>Unless you wish to only edit one file, use dir_shorten_seconds instead.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>filestring</strong> (<em>str</em>) – The path to the file you want to fix.</p>
+</dd>
+</dl>
+</dd></dl>
 
 </div>
 <div class="section" id="module-PDS_AREAL.utils.xmledits">
