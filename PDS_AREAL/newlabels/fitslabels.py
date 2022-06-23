@@ -13,10 +13,10 @@ def create_fits_labels(pathvar, templatevar, collection_name, bundle_name, title
     
     Args:
         pathvar (str): The absolute path to the fits files you wish to label. 
-            Ex. '/prvt/juno1/PDART_files/jup_supp.geminis_trecs/data_raw/*/*/*.fits'.
+            Ex. '/prvt/juno1/PDART_files/jup_supp.geminis_trecs/data_raw/\*/\*/\*.fits'.
             Note that the asterisks allow the search of multiple subdirectories. 
             If you wanted to run just in one year, the example instead may be
-            '/prvt/juno1/PDART_files/jup_supp.geminis_trecs/data_raw/2003/*/*.fits'.
+            '/prvt/juno1/PDART_files/jup_supp.geminis_trecs/data_raw/2003/\*/\*.fits'.
         templatevar (str): The absolute path to the txt label template. 
             Ex. '/home/bblakley/scripts/universal_fits_label.txt'
         collection_name (str): The name of the collection directory. 
@@ -100,6 +100,7 @@ def create_fits_labels(pathvar, templatevar, collection_name, bundle_name, title
         rewrite (:obj:`bool`, optional): Default is False. This means that if you're running labels in a 
             collection and the code finds labels that already exist, it will skip those and only create labels 
             that don't already exist. If you wish to overwrite incorrect labels, set this to rewrite = True.
+
     """
     errors = ''
     error_count = 0

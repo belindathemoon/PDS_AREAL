@@ -9,7 +9,7 @@ def create_header_observing_labels(pathvar, templatevar, collection_name, bundle
     
     Args:
         pathvar (str): The absolute path to the logs files you wish to label. 
-            Ex. '/prvt/juno1/PDART_files/jup_supp.irtf_mirsi/documents/header_observing_logs/*.txt'.
+            Ex. '/prvt/juno1/PDART_files/jup_supp.irtf_mirsi/documents/header_observing_logs/\*.txt'.
         templatevar (str): The absolute path to the label template. 
             Ex. '/home/bblakley/scripts/header_observing_logs_labels.txt'
         collection_name (str): The name of the collection directory. Usually 'documents'.
@@ -28,6 +28,7 @@ def create_header_observing_labels(pathvar, templatevar, collection_name, bundle
         keyword (:obj:`str`, optional): The target of these observations. Defaults to 'Jupiter'.
         description (:obj:`str`, optional): A description for the logs label. 
             Defaults to 'Observing log produced from FITS image headers'.
+
     """
     for path in glob.glob(pathvar):
         if os.path.exists(path.replace('.txt', '.xml')):

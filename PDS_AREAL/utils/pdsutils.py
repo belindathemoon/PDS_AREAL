@@ -15,6 +15,7 @@ def replace_text(rootdir, search_text, replace_text, print_status=True, file_typ
         print_status (:obj:`bool`, optional): By default, the function will print status to the terminal. For 
             quiet mode, change to False.
         file_type (str): The type of file you wish to edit. By default, the function looks for XML files.
+
     """
     for dirpath, dirs, files in os.walk(rootdir):
         for file in files:
@@ -36,6 +37,7 @@ def shorten_seconds(filestring):
     
     Args:
         filestring (str): The path to the file you want to fix.
+
     """
     old_text = open(filestring, 'r')
     new_text = ""
@@ -69,7 +71,8 @@ def dir_shorten_seconds(directory):
     
     Args:
         directory (str): The absolute path to the files in the directory you want to fix, with wildcards. 
-            For example "/prvt/juno1/PDART_files/jup_supp.geminis_trecs/data_raw/*/*/*.xml
+            For example "/prvt/juno1/PDART_files/jup_supp.geminis_trecs/data_raw/\*/\*/\*.xml
+
     """
     for filestring in glob.glob(directory):
         shorten_seconds(filestring)
