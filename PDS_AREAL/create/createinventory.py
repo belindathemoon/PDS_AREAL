@@ -15,6 +15,7 @@ def create_inventory(bundle_name, collection_path, data_path, file_extension):
 			subdirectories of the collection. 
 			Ex. '/prvt/juno1/PDART_files/jup_supp.irtf_mirsi/data_raw/*/*/*.fits'
 		file_extension (str): The type of file to be included. Ex. '.fits', '.txt' or '.tif'
+		
 	"""
 	collection_name = collection_path.rsplit('/',1)[1]
 	inventory_filename = 'collection_' + bundle_name + '_' + collection_name + '_inventory.csv'

@@ -37,6 +37,7 @@ def create_header_observing_logs(logs_path, day_path, documents = 'document', WA
             defaults to 'OBSMODE', however check a sample fits header for the correct observation mode key.
         AIRMASS (:obj:`str`, optional): The header entries might have different key names in each collection. This
             defaults to 'AIRMASS', however check a sample fits header for the correct airmass key.
+            
     """
     for day in glob.glob(day_path):
         print('Accessing: ' + day)

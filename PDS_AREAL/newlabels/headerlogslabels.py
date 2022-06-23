@@ -28,6 +28,7 @@ def create_header_observing_labels(pathvar, templatevar, collection_name, bundle
         keyword (:obj:`str`, optional): The target of these observations. Defaults to 'Jupiter'.
         description (:obj:`str`, optional): A description for the logs label. 
             Defaults to 'Observing log produced from FITS image headers'.
+            
     """
     for path in glob.glob(pathvar):
         if os.path.exists(path.replace('.txt', '.xml')):

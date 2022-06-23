@@ -100,6 +100,7 @@ def create_fits_labels(pathvar, templatevar, collection_name, bundle_name, title
         rewrite (:obj:`bool`, optional): Default is False. This means that if you're running labels in a 
             collection and the code finds labels that already exist, it will skip those and only create labels 
             that don't already exist. If you wish to overwrite incorrect labels, set this to rewrite = True.
+            
     """
     errors = ''
     error_count = 0
