@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>PDS_AREAL.create package &mdash; PDS AREAL 1.01 documentation</title>
+  <title>PDS_AREAL.create package &mdash; PDS AREAL 1.00 documentation</title>
   
 
   
@@ -176,14 +176,72 @@
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="pds-areal-create-createinventory-module">
-<h2>PDS_AREAL.create.createinventory module<a class="headerlink" href="#pds-areal-create-createinventory-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-PDS_AREAL.create.createinventory">
+<span id="pds-areal-create-createinventory-module"></span><h2>PDS_AREAL.create.createinventory module<a class="headerlink" href="#module-PDS_AREAL.create.createinventory" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="PDS_AREAL.create.createinventory.create_inventory">
+<code class="sig-prename descclassname"><span class="pre">PDS_AREAL.create.createinventory.</span></code><code class="sig-name descname"><span class="pre">create_inventory</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bundle_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">collection_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_extension</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PDS_AREAL.create.createinventory.create_inventory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create Inventory</p>
+<p>Create a CSV inventory for any collection.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>bundle_name</strong> (<em>str</em>) – The name of the bundle directory.             Ex. ‘jup_supp.geminis_trecs’ or ‘jup_supp.irtf_mirsi’.         collection_path (str): The path to the collection which needs the inventory.                    Do not include a trailing slash! Ex. ‘/prvt/juno1/PDART_files/jup_supp.irtf_mirsi/data_raw’             data_path (str): The path all the way to individual fits files, using wildcards for the                         subdirectories of the collection.                       Ex. ‘/prvt/juno1/PDART_files/jup_supp.irtf_mirsi/data_raw/*/*/*.fits’                file_extension (str): The type of file to be included. Ex. ‘.fits’, ‘.txt’ or ‘.tif’</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="PDS_AREAL.create.createinventory.create_inventory_instructions">
+<code class="sig-prename descclassname"><span class="pre">PDS_AREAL.create.createinventory.</span></code><code class="sig-name descname"><span class="pre">create_inventory_instructions</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#PDS_AREAL.create.createinventory.create_inventory_instructions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </div>
-<div class="section" id="pds-areal-create-createlogs-module">
-<h2>PDS_AREAL.create.createlogs module<a class="headerlink" href="#pds-areal-create-createlogs-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-PDS_AREAL.create.createlogs">
+<span id="pds-areal-create-createlogs-module"></span><h2>PDS_AREAL.create.createlogs module<a class="headerlink" href="#module-PDS_AREAL.create.createlogs" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="PDS_AREAL.create.createlogs.create_header_observing_logs">
+<code class="sig-prename descclassname"><span class="pre">PDS_AREAL.create.createlogs.</span></code><code class="sig-name descname"><span class="pre">create_header_observing_logs</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">logs_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">day_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">documents</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'document'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">WAVELENG</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'WAVELENG'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">DATEOBS</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'DATE-OBS'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">TIMEOBS</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'TIME-OBS'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">CHPFREQ</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'CHPFREQ'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">OBSMODE</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'OBSMODE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">AIRMASS</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'AIRMASS'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PDS_AREAL.create.createlogs.create_header_observing_logs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create Header Observing Logs</p>
+<p>Use this to create the observing logs of a data_raw collection. It takes specific data from the header, uses Astropy fits to create a dictionary, and then prints the header logs. A text file is created for each day.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>logs_path</strong> (<em>str</em>) – the path to where the logs should be saved.
+!!!Make sure there is a trailing slash!!!
+For example: /prvt/juno1/PDART_files/jup_supp.geminis_trecs/document/header_observing_logs/</p></li>
+<li><p><strong>day_path</strong> (<em>str</em>) – The path to the day-level directories of the data in the form of
+‘/prvt/juno1/PDART_files/bundle_name/data_raw/*/*’. The fits files should be in these day
+directories (the code below is set up for data in a directory with the format of
+‘/path-to-bundle/data_raw/yyyy/mm-dd/filename.fits’).
+This path variable should go only as deep as the mm-dd subdirectory, with the year and date
+as wilcards, for example: ‘prvt/juno1/PDART_files/jup_supp.geminis_trecs/data_raw/*/*’
+(NO TRAILING SLASH)</p></li>
+<li><p><strong>documents</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, optional) – The name of your documents folder (it should be in the path in logs_path).</p></li>
+<li><p><strong>WAVELENG</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, optional) – The header entries might have different key names in each collection. This
+defaults to ‘WAVELENG’, however check a sample fits header for the correct wavelength key.</p></li>
+<li><p><strong>DATEOBS</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, optional) – The header entries might have different key names in each collection. This
+defaults to ‘DATE-OBS’, however check a sample fits header for the correct observation date key.</p></li>
+<li><p><strong>TIMEOBS</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, optional) – The header entries might have different key names in each collection. This
+defaults to ‘TIME-OBS’, however check a sample fits header for the correct observation time key.</p></li>
+<li><p><strong>CHPFREQ</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, optional) – The header entries might have different key names in each collection. This
+defaults to ‘CHPFREQ’, however check a sample fits header for the correct chop frequency key.</p></li>
+<li><p><strong>OBSMODE</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, optional) – The header entries might have different key names in each collection. This
+defaults to ‘OBSMODE’, however check a sample fits header for the correct observation mode key.</p></li>
+<li><p><strong>AIRMASS</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, optional) – The header entries might have different key names in each collection. This
+defaults to ‘AIRMASS’, however check a sample fits header for the correct airmass key.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="PDS_AREAL.create.createlogs.create_logs_instructions">
+<code class="sig-prename descclassname"><span class="pre">PDS_AREAL.create.createlogs.</span></code><code class="sig-name descname"><span class="pre">create_logs_instructions</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#PDS_AREAL.create.createlogs.create_logs_instructions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </div>
-<div class="section" id="module-contents">
-<h2>Module contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-PDS_AREAL.create">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-PDS_AREAL.create" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 

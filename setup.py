@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 setup(
-	name="PDS-AREAL",
-	version="0.1",
+	name="PDS_AREAL",
+	version="1.00",
 	packages=find_packages()
 )

@@ -1,10 +1,1 @@
-from astropy.io import fits
-import datetime
-import glob
-import os
-import math
-import time
-from stat import *
-import re
-from .fitslabels import *
-from .headerlogslabels import *
+print('Ok, ready to create labels! Refer to the docs for all required and optional arguments.')

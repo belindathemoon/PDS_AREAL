@@ -1,5 +1,1 @@
-import glob
-import os
-from astropy.io import fits
-from .createinventory import *
-from .createlogs import *
+print('Ready to create logs and inventories! For instructions, run create_inventory_instructions() or create_logs_instructions() to get more info')

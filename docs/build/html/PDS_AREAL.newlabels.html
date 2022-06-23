@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>PDS_AREAL.newlabels package &mdash; PDS AREAL 1.01 documentation</title>
+  <title>PDS_AREAL.newlabels package &mdash; PDS AREAL 1.00 documentation</title>
   
 
   
@@ -181,7 +181,103 @@
 <dl class="py function">
 <dt id="PDS_AREAL.newlabels.fitslabels.create_fits_labels">
 <code class="sig-prename descclassname"><span class="pre">PDS_AREAL.newlabels.fitslabels.</span></code><code class="sig-name descname"><span class="pre">create_fits_labels</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pathvar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">templatevar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">collection_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bundle_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">product_class</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">product_author_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">observing_system</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">telescope_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">telescope_lid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">instrument_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">instrument_lid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">document_lid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fits_desc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fits_prolvl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fits_primdesc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu_desc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Ground</span> <span class="pre">Based</span> <span class="pre">FITS,</span> <span class="pre">emission</span> <span class="pre">angle</span> <span class="pre">adjustment</span> <span class="pre">for</span> <span class="pre">cylindrical</span> <span class="pre">map.'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cmap_desc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Ground</span> <span class="pre">Based</span> <span class="pre">FITS,</span> <span class="pre">cylindrical</span> <span class="pre">map</span> <span class="pre">projection.'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vdop_desc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Ground</span> <span class="pre">Based</span> <span class="pre">FITS,</span> <span class="pre">doppler</span> <span class="pre">shift</span> <span class="pre">adjustment</span> <span class="pre">for</span> <span class="pre">cylindrical</span> <span class="pre">map.'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu_prolvl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Derived'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cmap_prolvl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Derived'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vdop_prolvl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Derived'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu_primdesc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Cosine</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">emission</span> <span class="pre">angle</span> <span class="pre">for</span> <span class="pre">each</span> <span class="pre">point</span> <span class="pre">on</span> <span class="pre">cylindrical</span> <span class="pre">map</span> <span class="pre">from</span> <span class="pre">the</span> <span class="pre">angle</span> <span class="pre">between</span> <span class="pre">the</span> <span class="pre">local</span> <span class="pre">zenith</span> <span class="pre">and</span> <span class="pre">direction</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">Earth-based</span> <span class="pre">observer'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cmap_primdesc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Projection</span> <span class="pre">onto</span> <span class="pre">linear</span> <span class="pre">cylindrical</span> <span class="pre">coordinate</span> <span class="pre">system</span> <span class="pre">longitude</span> <span class="pre">in</span> <span class="pre">System</span> <span class="pre">III</span> <span class="pre">along</span> <span class="pre">abscissa</span> <span class="pre">and</span> <span class="pre">planetocentric</span> <span class="pre">latitude</span> <span class="pre">in</span> <span class="pre">the</span> <span class="pre">ordinate'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vdop_primdesc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Radial</span> <span class="pre">velocity</span> <span class="pre">of</span> <span class="pre">cylindrical</span> <span class="pre">map</span> <span class="pre">according</span> <span class="pre">to</span> <span class="pre">an</span> <span class="pre">Earth-based</span> <span class="pre">observer</span> <span class="pre">for</span> <span class="pre">CH4</span> <span class="pre">emission</span> <span class="pre">interference</span> <span class="pre">at</span> <span class="pre">7.9</span> <span class="pre">microns</span> <span class="pre">with</span> <span class="pre">telluric</span> <span class="pre">CH4</span> <span class="pre">absorption'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extrablocks</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">editor_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Neakrase,</span> <span class="pre">Lynn;</span> <span class="pre">Huber,</span> <span class="pre">Lyle'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">publication_year</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'2022'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wavelength_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Infrared'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">investigation_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Jupiter</span> <span class="pre">Support</span> <span class="pre">Monitoring</span> <span class="pre">Observations'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">investigation_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Observing</span> <span class="pre">Campaign'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">investigation_lid</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'observing_campaign.jupiter_support'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">observatory_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'NASA</span> <span class="pre">InfraRed</span> <span class="pre">Telescope</span> <span class="pre">Facility'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">observatory_lid</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'observatory.irtf-maunakea.3m2'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Jupiter'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Planet'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_lid</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'planet.jupiter'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parsing_standard</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'FITS</span> <span class="pre">3.0'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">header_description</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'The</span> <span class="pre">header</span> <span class="pre">contains</span> <span class="pre">information</span> <span class="pre">about</span> <span class="pre">how</span> <span class="pre">the</span> <span class="pre">image</span> <span class="pre">was</span> <span class="pre">collected</span> <span class="pre">and</span> <span class="pre">any</span> <span class="pre">processing</span> <span class="pre">that</span> <span class="pre">may</span> <span class="pre">have</span> <span class="pre">happened.'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">image_description</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">&quot;The</span> <span class="pre">image</span> <span class="pre">shows</span> <span class="pre">Jupiter's</span> <span class="pre">atmosphere.&quot;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">array_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'IEEE754MSBSingle'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">array_unit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'DN'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rewrite</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PDS_AREAL.newlabels.fitslabels.create_fits_labels" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Create fits labels</p>
+<p>Create new (or overwrite existing) xml labels for fits files in data_raw, data_calibrated, or calibration collections.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pathvar</strong> (<em>str</em>) – The absolute path to the fits files you wish to label.
+Ex. ‘/prvt/juno1/PDART_files/jup_supp.geminis_trecs/data_raw/*/*/*.fits’.
+Note that the asterisks allow the search of multiple subdirectories.
+If you wanted to run just in one year, the example instead may be
+‘/prvt/juno1/PDART_files/jup_supp.geminis_trecs/data_raw/2003/*/*.fits’.</p></li>
+<li><p><strong>templatevar</strong> (<em>str</em>) – The absolute path to the txt label template.
+Ex. ‘/home/bblakley/scripts/universal_fits_label.txt’</p></li>
+<li><p><strong>collection_name</strong> (<em>str</em>) – The name of the collection directory.
+Either ‘data_raw’, ‘data_calibrated’, or ‘calibration’.</p></li>
+<li><p><strong>bundle_name</strong> (<em>str</em>) – The name of the bundle directory.
+Ex. ‘jup_supp.geminis_trecs’ or ‘jup_supp.irtf_mirsi’.</p></li>
+<li><p><strong>title</strong> (<em>str</em>) – A descriptive title for the labels.
+Ex. ‘NASA IRTF 3-Meter Telescope - MIRSI Observation’ or ‘T-ReCS Observation’.</p></li>
+<li><p><strong>product_class</strong> (<em>str</em>) – The PDS data product class. Generally, ‘Product_Observational’.
+product_author_list (str): The authors of the observations (not to be confused with the authors of
+the labels). Ask Glenn if you can’t tell from the image headers. Must be a list of authors’
+‘last name, first name’ separated by semicolons.
+Ex. ‘Orton, Glenn; Venkatesan, Malavika; Kim, Min Hyuk; Yanamandra-Fisher, Padma; Chung, Jennie’</p></li>
+<li><p><strong>observing_system</strong> (<em>str</em>) – Official name of the whole observing system, including observatory, telescope,
+and instrument. Examples include:
+‘Gemini South 8.1-m Telescope, Gemini Observatory, National Science Foundation NOIRLab’
+or ‘3.0-m NASA Infrared Telescope Facility (IRTF) at Mauna Kea Observatory’</p></li>
+<li><p><strong>name</strong> (<em>telescope</em>) – The official PDS name of the telescope. Ex. ‘NASA IRTF 3.0-m Telescope MIRSI’</p></li>
+<li><p><strong>telescope_lid</strong> (<em>str</em>) – The PDS LID of the telescope (not to be confused with the LID of the observatory
+or instrument). Ex. ‘irtf-maunakea.3m2’. Double check with Lynn if you’re not sure.</p></li>
+<li><p><strong>instrument_name</strong> (<em>str</em>) – The official PDS name of the instrument.
+Ex. ‘Mid-Infrared Spectrometer and Imager (MIRSI)’ or ‘Thermal-Region Camera Spectrograph (T-ReCS)’</p></li>
+<li><p><strong>instrument_lid</strong> (<em>str</em>) – The PDS LID of the instrument. Ex. ‘irtf-maunakea.3m2.mirsi’. Check with Lynn.</p></li>
+<li><p><strong>document_lid</strong> (<em>str</em>) – The LID of the userguide for these labels. Generally, it’s just the shorthand
+name of the bundle and then _userguide. Ex. ‘mirsi_userguide’</p></li>
+<li><p><strong>fits_desc</strong> (<em>str</em>) – The description of the fits images. It can be short, but note that it will change
+from each collection. Ex. ‘Ground Based FITS, calibrated data.’</p></li>
+<li><p><strong>fits_prolvl</strong> (<em>str</em>) – The processing level of the fits images. For calibrated collections,
+that will be ‘Calibrated’ and for raw collections, that will be ‘Raw’.</p></li>
+<li><p><strong>fits_primdesc</strong> (<em>str</em>) – Short description of the type of image. Ex. ‘Calibrated data’ or ‘Raw data’.</p></li>
+<li><p><strong>mu_desc</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, optional) – Description of the mu.fits calibrated images. With no user input,
+defaults to ‘Ground Based FITS, emission angle adjustment for cylindrical map.’</p></li>
+<li><p><strong>cmap_desc</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, optional) – Description of the cmap.fits calibrated images. With no user input,
+defaults to ‘Ground Based FITS, cylindrical map projection.’</p></li>
+<li><p><strong>vdop_desc</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, optional) – Description of the vdop.fits calibrated images. With no user input,
+defaults to ‘Ground Based FITS, doppler shift adjustment for cylindrical map.’</p></li>
+<li><p><strong>mu_prolvl</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, optional) – Processing level of the mu.fits calibrated images. With no user input,
+defaults to ‘Derived’.</p></li>
+<li><p><strong>cmap_prolvl</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, optional) – Processing level of the cmap.fits calibrated images. With no user
+input, defaults to ‘Derived’.</p></li>
+<li><p><strong>vdop_prolvl</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, optional) – Processing level of the vdop.fits calibrated images.
+With no user input, defaults to ‘Derived’.</p></li>
+<li><p><strong>mu_primdesc</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, optional) – Primary description of the mu.fits images. With no user input,
+defaults to ‘Cosine of the emission angle for each point on cylindrical map from the angle between
+the local zenith and direction of the Earth-based observer’</p></li>
+<li><p><strong>cmap_primdesc</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, optional) – Primary description of the cmap.fits images. With no user input,
+defaults to ‘Projection onto linear cylindrical coordinate system longitude in System III along
+abscissa and planetocentric latitude in the ordinate’</p></li>
+<li><p><strong>vdop_primdesc</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, optional) – Primary description of the vdop.fits images. With no user input,
+defaults to ‘Radial velocity of cylindrical map according to an Earth-based observer for CH4
+emission interference at 7.9 microns with telluric CH4 absorption’</p></li>
+<li><p><strong>extrablocks</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code>, optional) – Number of extra blocks to add to the offset size for the image.
+Default = 0. For most collections this can stay at default of 0, however for T-ReCS it must be 2
+(extrablocks = 2).</p></li>
+<li><p><strong>editor_list</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, optional) – PDS editors. Defaults to ‘Neakrase, Lynn; Huber, Lyle’.</p></li>
+<li><p><strong>publication_year</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, optional) – Year that the bundle will be published to the PDS.
+With no user input, defaults to this year (uses datetime).</p></li>
+<li><p><strong>wavelength_range</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, optional) – Wavelength range of the observations. Defaults to ‘Infrared’.</p></li>
+<li><p><strong>investigation_name</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, optional) – PDS name of the observing campaign or other investigation
+that produced these images. With no user input, defaults to ‘Jupiter Support Monitoring Observations’.</p></li>
+<li><p><strong>investigation_type</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, optional) – Defaults to ‘Observing Campaign’.</p></li>
+<li><p><strong>investigation_lid</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, optional) – PDS LID of the investigation that produced these images.
+Defaults to ‘observing_campaign.jupiter_support’.</p></li>
+<li><p><strong>observatory_name</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, optional) – Name of the observatory. You’ll need to change this for
+T-ReCS and COMICS, but it’s set to the default that MIRSI, MIRLIN, and MIRAC use.
+Defaults to ‘NASA InfraRed Telescope Facility’.</p></li>
+<li><p><strong>observatory_lid</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, optional) – The PDS LID of the observatory named in the above argument.
+Change this if you’re changing that one. Defaults to ‘observatory.irtf-maunakea’.</p></li>
+<li><p><strong>target_name</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, optional) – The target of these observations. Defaults to ‘Jupiter’.</p></li>
+<li><p><strong>target_type</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, optional) – The type of target of these observations. Defaults to ‘Planet’.</p></li>
+<li><p><strong>target_lid</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, optional) – The LID of the target. Defaults to ‘planet.jupiter’.</p></li>
+<li><p><strong>parsing_standard</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, optional) – Parsing standard of the fits files. Unlikely that this
+will change, but could update for new observations. Defaults to ‘FITS 3.0’.</p></li>
+<li><p><strong>header_description</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, optional) – This is the description of the header of the images.
+Pretty standard across all fits images. Defaults to  ‘The header contains information about
+how the image was collected and any processing that may have happened.’</p></li>
+<li><p><strong>image_description</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, optional) – A brief description of the image itself. Since there are so
+many you’ll likely want to keep this standardized. Defaults to ‘The image shows Jupiter’s atmosphere.’</p></li>
+<li><p><strong>array_type</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, optional) – Defaults to ‘IEEE754MSBSingle’.</p></li>
+<li><p><strong>array_unit</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, optional) – Defaults to ‘DN’.</p></li>
+<li><p><strong>rewrite</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">bool</span></code>, optional) – Default is False. This means that if you’re running labels in a
+collection and the code finds labels that already exist, it will skip those and only create labels
+that don’t already exist. If you wish to overwrite incorrect labels, set this to rewrite = True.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
 
 </div>
 <div class="section" id="module-PDS_AREAL.newlabels.headerlogslabels">
@@ -189,7 +285,35 @@
 <dl class="py function">
 <dt id="PDS_AREAL.newlabels.headerlogslabels.create_header_observing_labels">
 <code class="sig-prename descclassname"><span class="pre">PDS_AREAL.newlabels.headerlogslabels.</span></code><code class="sig-name descname"><span class="pre">create_header_observing_labels</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pathvar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">templatevar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">collection_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bundle_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bundle_title</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">product_author_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">instrument_lid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">editor_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Neakrase,</span> <span class="pre">Lynn;</span> <span class="pre">Huber,</span> <span class="pre">Lyle'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">publication_year</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'2022'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keyword</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Jupiter'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Observing</span> <span class="pre">log</span> <span class="pre">produced</span> <span class="pre">from</span> <span class="pre">FITS</span> <span class="pre">image</span> <span class="pre">headers'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PDS_AREAL.newlabels.headerlogslabels.create_header_observing_labels" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Create Header Observing Logs Labels</p>
+<p>Create new xml labels for .txt observing logs (created from the FITS headers) in the documents collection.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pathvar</strong> (<em>str</em>) – The absolute path to the logs files you wish to label.
+Ex. ‘/prvt/juno1/PDART_files/jup_supp.irtf_mirsi/documents/header_observing_logs/*.txt’.</p></li>
+<li><p><strong>templatevar</strong> (<em>str</em>) – The absolute path to the label template.
+Ex. ‘/home/bblakley/scripts/header_observing_logs_labels.txt’</p></li>
+<li><p><strong>collection_name</strong> (<em>str</em>) – The name of the collection directory. Usually ‘documents’.</p></li>
+<li><p><strong>bundle_name</strong> (<em>str</em>) – The name of the bundle directory. Ex. ‘jup_supp.geminis_trecs’
+or ‘jup_supp.irtf_mirsi’.</p></li>
+<li><p><strong>bundle_title</strong> (<em>str</em>) – A descriptive title for the labels that matches the fits collections.
+Ex. ‘NASA IRTF 3-Meter Telescope - MIRSI Observation’ or ‘T-ReCS Observation’.</p></li>
+<li><p><strong>product_author_list</strong> (<em>str</em>) – The authors of the observations (not to be confused with the
+authors of the labels). Ask Glenn if you can’t tell from the image headers. Must be a list of
+authors’ ‘last name, first name’ separated by semicolons.
+Ex. ‘Orton, Glenn; Venkatesan, Malavika; Kim, Min Hyuk; Yanamandra-Fisher, Padma; Chung, Jennie’</p></li>
+<li><p><strong>instrument_lid</strong> (<em>str</em>) – The PDS LID of the instrument. Ex. ‘irtf-maunakea.3m2.mirsi’. Check with Lynn.</p></li>
+<li><p><strong>editor_list</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, optional) – PDS editors. Defaults to ‘Neakrase, Lynn; Huber, Lyle’.</p></li>
+<li><p><strong>publication_year</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, optional) – Year that the bundle will be published to the PDS.
+With no user input, defaults to this year (uses datetime).</p></li>
+<li><p><strong>keyword</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, optional) – The target of these observations. Defaults to ‘Jupiter’.</p></li>
+<li><p><strong>description</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code>, optional) – A description for the logs label.
+Defaults to ‘Observing log produced from FITS image headers’.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
 
 </div>
 <div class="section" id="module-PDS_AREAL.newlabels">
