@@ -1,0 +1,1 @@
+print('Ready to create logs and inventories! For instructions, run create_inventory_instructions() or create_logs_instructions() to get more info')
