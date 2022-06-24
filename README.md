@@ -7,4 +7,5 @@ The Planetary Data System (PDS) is a NASA digital archive making high-quality da
 ### Modules
 This package contains modules divided into three categories: create, which allows creation of PDS-required, non-label documents (inventories and observation logs); new labels, which allows labeling of data and of observation logs; and utilities, which contains different functions for fixing common errors.
 
-[![codeastro](https://img.shields.io/badge/Made%20at-Code/Astro-blueviolet.svg)](https://semaphorep.github.io/codeastro/)
+[![codeastro](https://img.shields.io/badge/Made%20at-Code/Astro-blueviolet.svg)](https://semaphorep.github.io/codeastro/) [![Documentation Status](https://readthedocs.org/projects/pds-areal/badge/?version=latest)](https://pds-areal.readthedocs.io/en/latest/?badge=latest)
+
