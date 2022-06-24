@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1A10.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Document xmlns="http://pds.nasa.gov/pds4/pds/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 http://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1A10.xsd">
+    <Identification_Area>
+        <logical_identifier>urn:nasa:pds:$LID$</logical_identifier>
+        <version_id>1.0</version_id>
+        <title>$TITLE$</title>
+        <information_model_version>1.10.1.0</information_model_version>
+        <product_class>Product_Document</product_class>
+        <Citation_Information>
+            <author_list>$PRODUCT_AUTHOR_LIST$</author_list>
+            <editor_list>$EDITOR_LIST$</editor_list>
+            <publication_year>$PUBLICATION_YEAR$</publication_year>
+            <keyword>$KEYWORD$</keyword>
+            <description>$DESCRIPTION$</description>
+        </Citation_Information>
+        <Modification_History>
+            <Modification_Detail>
+                <modification_date>$MODIFICATION_DATE$</modification_date>
+                <version_id>1.0</version_id>
+                <description>Initial PDS4 archiving efforts</description>
+            </Modification_Detail>
+        </Modification_History>
+    </Identification_Area>
+    <Reference_List>
+        <Internal_Reference>
+            <lid_reference>urn:nasa:pds:context:instrument:$INSTRUMENT_LID$</lid_reference>
+            <reference_type>document_to_instrument</reference_type>
+        </Internal_Reference>
+    </Reference_List>
+    <Document>
+        <revision_id>1.0</revision_id>
+        <document_name>$FILE_NAME$</document_name>
+        <author_list>$PRODUCT_AUTHOR_LIST$</author_list>
+        <publication_date>$CREATION_DTIME$</publication_date>
+        <document_editions>1</document_editions>
+        <description>Observing log produced from FITS image headers</description>
+        <Document_Edition>
+            <edition_name>$FILE_NAME$</edition_name>
+            <language>English</language>
+            <files>1</files>
+            <Document_File>
+                <file_name>$FILE_NAME$</file_name>
+                <local_identifier>$LOCAL_ID$</local_identifier>
+                <document_standard_id>TXT</document_standard_id>
+            </Document_File>
+        </Document_Edition>
+    </Document>
+</Product_Document>
