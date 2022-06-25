@@ -185,7 +185,16 @@
 <p>Create a CSV inventory for any collection.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>bundle_name</strong> (<em>str</em>) – The name of the bundle directory.             Ex. ‘jup_supp.geminis_trecs’ or ‘jup_supp.irtf_mirsi’.         collection_path (str): The path to the collection which needs the inventory.                    Do not include a trailing slash! Ex. ‘/prvt/juno1/PDART_files/jup_supp.irtf_mirsi/data_raw’             data_path (str): The path all the way to individual fits files, using wildcards for the                         subdirectories of the collection.                       Ex. ‘/prvt/juno1/PDART_files/jup_supp.irtf_mirsi/data_raw/*/*/*.fits’                file_extension (str): The type of file to be included. Ex. ‘.fits’, ‘.txt’ or ‘.tif’</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bundle_name</strong> (<em>str</em>) – The name of the bundle directory.
+Ex. ‘jup_supp.geminis_trecs’ or ‘jup_supp.irtf_mirsi’.</p></li>
+<li><p><strong>collection_path</strong> (<em>str</em>) – The path to the collection which needs the inventory.
+Do not include a trailing slash! Ex. ‘/prvt/juno1/PDART_files/jup_supp.irtf_mirsi/data_raw’</p></li>
+<li><p><strong>data_path</strong> (<em>str</em>) – The path all the way to individual fits files, using wildcards for the
+subdirectories of the collection.
+Ex. ‘/prvt/juno1/PDART_files/jup_supp.irtf_mirsi/data_raw/*/*/*.fits’</p></li>
+<li><p><strong>file_extension</strong> (<em>str</em>) – The type of file to be included. Ex. ‘.fits’, ‘.txt’ or ‘.tif’</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
