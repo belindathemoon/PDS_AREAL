@@ -10,12 +10,10 @@ Welcome to PDS AREAL's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-   modules
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
+
+Additional documentation & Sources
+==================================
+* `User Guide <https://docs.google.com/document/d/1mtmyCwCOTyKN8GMqaaIAlsqlbClWT4e5qgakTlAlFqA/edit?usp=sharing>`_
+* `Templates <https://github.com/belindathemoon/PDS_AREAL/tree/main/templates>`_
