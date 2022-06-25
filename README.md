@@ -1,7 +1,7 @@
 # PDS_AREAL (Planetary Data System AtmospheREs Archive Labeling)
 Automated labeling of ground-based observations of Jupiter for the PDS Atmosphers node
 
-*Documentation:* https://pds-areal.readthedocs.io/en/latest/PDS_AREAL.html
+*Documentation:* https://pds-areal.readthedocs.io/en/latest/index.html
 
 ### About
 The Planetary Data System (PDS) is a NASA digital archive making high-quality data available to the research community and the public. This project is specific to the Atmospheres Node, which is one node of the PDS, and specific to ground-based observations of Jupiter within Glenn Orton’s Planetary Atmospheres group at JPL, although the functions have been created to allow usage beyond this specific project.
