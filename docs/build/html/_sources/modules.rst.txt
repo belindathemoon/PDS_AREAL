@@ -5,4 +5,3 @@ PDS-AREAL
    :maxdepth: 4
 
    PDS_AREAL
-   setup
